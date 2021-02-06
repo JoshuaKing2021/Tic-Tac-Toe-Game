@@ -1,0 +1,25 @@
+table{
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 600px;
+    height: 600px;
+    background: tomato;
+    padding: 0.5rem;
+}
+td{
+    width: 90px;
+    height: 90px;
+    background-color: black;
+    border: 5px solid tomato;
+}
+body{
+    background-color: tomato;
+}
+#titleGame{
+   text-align: center;
+   font-family: Arial,
+   Helvetica,
+   sans-serif;
+}

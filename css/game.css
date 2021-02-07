@@ -6,7 +6,6 @@ table{
     width: 600px;
     height: 600px;
     background: tomato;
-    padding: 0.5rem;
 }
 td{
     width: 90px;
@@ -17,9 +16,31 @@ td{
 body{
     background-color: tomato;
 }
+.playerTurn {
+    text-align: left;
+    font-family: sans-serif;
+    color: black;
+}
+.playerTurnTwo {
+    margin-top: -2.2rem;
+    text-align: right;
+    font-family: sans-serif;
+    color: black;
+}
 #titleGame{
    text-align: center;
    font-family: Arial,
    Helvetica,
    sans-serif;
 }
+#circleImg{
+    width: 200px;
+    height: 200px;
+    margin-left: 58rem;
+}
+#crossImg{
+    width: 200px;
+    height: 200px;
+    margin-top: 0rem;
+}
+

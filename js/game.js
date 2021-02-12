@@ -15,4 +15,29 @@ let playerTurn = document.querySelector('.playerTurn');
 let playerTurn2 = document.querySelector('.playerTurnTwo');
 
 playerTurn.textContent = `${playerOne} é a tua Vez`;
-playerTurn2.textContent = `${playerTwo} é a tua Vez`
+
+
+//variáveis 
+let x = '../img/cross.png';
+let o = '../img/circle.png';
+let tableData = document.getElementsByTagName('tr');
+let tableRow = document.getElementsByTagName('td');
+let spaces = document.getElementsByClassName('space')
+let currentPlayer = 1;
+
+Array.prototype.forEach.call(tableData, (cell) => {
+    cell.addEventListener('click', gameEngine);
+    // Defina todos os espaços como brancos para um novo jogo.
+    cell.style.backgroundColor = 'white';
+});
+
+function gameEngine() {
+    for(let i = 0; i < tableData.length; i++){
+
+        if (currentPlayer = 1) {
+            
+        }
+    }
+}
+
+

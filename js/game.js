@@ -34,3 +34,19 @@ function clickBoard(clickedCell, clickedCellIndex) {
     clickedCell.innerHTML = currentPlayer;
 }
 
+// função para alterar o turno dos jogadores
+function playerChange() {
+   //currentPlayer = currentPlayer === xPlayer ? oPlayer : xPlayer;
+   if (currentPlayer === xPlayer) {
+    currentPlayer = oPlayer; 
+    playerTurn2.textContent = `${playerTwo} é a tua vez`
+    playerTurn2.style.visibility = 'visible';
+    playerTurn.style.visibility = 'hidden';
+
+   }else{
+    currentPlayer = xPlayer;    
+    playerTurn2.style.visibility = 'hidden';
+    playerTurn.style.visibility = 'visible';
+    playerTurn.textContent = `${playerOne} é a tua vez` 
+   }
+}

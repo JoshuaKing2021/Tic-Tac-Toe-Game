@@ -50,3 +50,50 @@ function playerChange() {
     playerTurn.textContent = `${playerOne} é a tua vez` 
    }
 }
+
+//Verificaçóes
+const winningConditions = [
+    // verificação na Horizontal
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    // verificação na Vertical
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    //verificação na Diagonal
+    [0, 4, 8],
+    [2, 4, 6]
+]
+
+//função para certificaçãp do resultado
+function resultValidation() {
+    let roundWon = false;
+    for(let i = 0; i < 8; i++) {
+        const winConditions = winningConditions[i];
+        let a = gameBoard[winConditions[0]];
+        let b = gameBoard[winConditions[1]];
+        let c = gameBoard[winConditions[2]];
+
+        if(a === '' || b === '' || c === ''){
+            continue;
+        }
+        if(a === b && b === c) {
+            roundWon = true;
+            break
+        }
+    }
+
+    if(roundWon){
+        gameActive = false;
+        return;
+    }
+
+    let roundDraw = !gameBoard.includes("");
+    if(roundDraw){
+        gameActive = false;
+        return;
+    }
+
+    playerChange();
+}

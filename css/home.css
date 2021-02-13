@@ -1,0 +1,45 @@
+#start {
+  margin-left: auto;
+  display: block;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 5%;
+}
+#rules {
+  margin-left: auto;
+  display: block;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 1%;
+  color: white;
+}
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8%;
+}
+#logo2 {
+  display: block;
+  width: 8%;
+}
+.column {
+  float: left;
+  padding: 5px;
+}
+.row {
+  display: flex;
+  margin-left: 5rem;
+}
+body {
+  background-color: tomato;
+}

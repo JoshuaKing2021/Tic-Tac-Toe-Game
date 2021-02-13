@@ -12,6 +12,10 @@ table {
   height: 90px;
   background-color: white;
   border: 5px solid tomato;
+  font-family: "Permanent Marker", cursive;
+  font-size: 100px;
+  text-align: center;
+  align-content: center;
 }
 body {
   background-color: tomato;
@@ -31,6 +35,10 @@ body {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+#message {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
 #circleImg {
   width: 200px;
   height: 200px;
@@ -39,5 +47,5 @@ body {
 #crossImg {
   width: 200px;
   height: 200px;
-  margin-top: 0rem;
+  margin-top: 5rem;
 }

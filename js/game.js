@@ -28,5 +28,9 @@ let oPlayer = "O";
 let currentPlayer = xPlayer;
 let gameBoard = ["","","","","","","","",""];
 
-
+// função chamada quando fazemos um click na tabela
+function clickBoard(clickedCell, clickedCellIndex) {
+    gameBoard[clickedCellIndex] = currentPlayer;
+    clickedCell.innerHTML = currentPlayer;
+}
 

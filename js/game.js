@@ -97,3 +97,19 @@ function resultValidation() {
 
     playerChange();
 }
+
+//função para verficar se a tabela está preenchida
+function fullBoard(clickedCellEvent) {
+    const clickedCell = clickedCellEvent.target;
+
+    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
+
+    if(gameBoard[clickedCellIndex] !== "" || !gameActive){
+        return;
+    }
+
+    clickBoard(clickedCell, clickedCellIndex);
+    resultValidation();
+}
+// for each para iterar sobre a tabela , cada vez que é feito o click
+document.querySelectorAll('.space').forEach(cell => cell.addEventListener('click',fullBoard));

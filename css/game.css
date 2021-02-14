@@ -49,3 +49,15 @@ body {
   height: 200px;
   margin-top: 5rem;
 }
+#reset {
+  margin-left: auto;
+  display: block;
+  background-color: black;
+  color: white;
+  margin-left: 8%;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 15%;
+}

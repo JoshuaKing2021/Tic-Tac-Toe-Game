@@ -17,9 +17,9 @@ let playerTurn2 = document.querySelector('.playerTurnTwo');
 let imgX = document.getElementById('crossImg');
 let imgO = document.getElementById('circleImg');
 let gameTitle = document.getElementById('titleGame');
+let restartButton = document.getElementById('reset');
 
- playerTurn.textContent = `${playerOne} é a tua vez`    
-
+ playerTurn.textContent = `${playerOne} é a tua vez`  
 
 //variáveis 
 let gameActive = true;
@@ -27,6 +27,9 @@ let xPlayer = "X";
 let oPlayer = "O";
 let currentPlayer = xPlayer;
 let gameBoard = ["","","","","","","","",""];
+
+ //mensagens
+let drawText = `Empate`;
 
 // função chamada quando fazemos um click na tabela
 function clickBoard(clickedCell, clickedCellIndex) {
@@ -86,12 +89,15 @@ function resultValidation() {
 
     if(roundWon){
         gameActive = false;
+        let winText = `${currentPlayer} é o vencedor!`
+        gameTitle.textContent = winText;
         return;
     }
 
     let roundDraw = !gameBoard.includes("");
     if(roundDraw){
         gameActive = false;
+        gameTitle.textContent = drawText;
         return;
     }
 
@@ -111,5 +117,16 @@ function fullBoard(clickedCellEvent) {
     clickBoard(clickedCell, clickedCellIndex);
     resultValidation();
 }
+
+//função para restart
+function restartGame() {
+    gameActive = true;
+    currentPlayer = xPlayer;
+    gameBoard = ["", "", "", "", "", "", "", "", ""];
+    document.querySelectorAll('.space')
+               .forEach(cell => cell.innerHTML = "");
+    gameTitle.textContent = 'Tic-Tac-Toe Game';
+}
+restartButton.addEventListener('click', restartGame);
 // for each para iterar sobre a tabela , cada vez que é feito o click
 document.querySelectorAll('.space').forEach(cell => cell.addEventListener('click',fullBoard));

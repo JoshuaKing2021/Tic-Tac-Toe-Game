@@ -126,6 +126,8 @@ function restartGame() {
     document.querySelectorAll('.space')
                .forEach(cell => cell.innerHTML = "");
     gameTitle.textContent = 'Tic-Tac-Toe Game';
+    playerTurn2.style.visibility = 'hidden';
+    playerTurn.style.visibility = 'visible';
 }
 restartButton.addEventListener('click', restartGame);
 // for each para iterar sobre a tabela , cada vez que é feito o click
